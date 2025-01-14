@@ -1,13 +1,10 @@
 services:
   - type: web
     name: your-app-name
-    env: node
-    region: oregon # or your preferred region
-    plan: free # or starter/standard
-    branch: main
+    runtime: node
     buildCommand: npm install
-    startCommand: node server.js # or whatever your start script is
-    healthCheckPath: /api/health # if you have a health check endpoint
+    startCommand: npm start
+    plan: free
     envVars:
       - key: NODE_ENV
         value: production
@@ -17,4 +14,3 @@ services:
         sync: false
       - key: JWT_EXPIRE
         value: 30d
-    autoDeploy: true
