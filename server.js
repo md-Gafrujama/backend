@@ -29,7 +29,8 @@ app.use('/api/activities', activityRoutes);
 app.get('/', (req, res) => {
   res.json({
     name: "Gafru",
-    welcome: "true"
+    welcome: "true",
+    message: "Updated server"
   })
 });
 
